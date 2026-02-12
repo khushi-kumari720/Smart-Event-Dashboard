@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Event Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Smart Event Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <div class="left-panel">
+            <div class="card">
+                <h2>Add New Event</h2>
+                <form id="eventForm">
+                    <div>
+                        <label for="eventTitle">Event Title:</label>
+                        <input type="text" id="eventTitle" placeholder="e.g., Tech Conference" required>
+                    </div>
+
+                    <div>
+                        <label for="eventDate">Event Date:</label>
+                        <input type="date" id="eventDate" required>
+                    </div>
+
+                    <div>
+                        <label for="eventCategory">Category:</label>
+                        <select id="eventCategory">
+                            <option value="Conference">Conference</option>
+                            <option value="Workshop">Workshop</option>
+                            <option value="Meetup">Meetup</option>
+                            <option value="Party">Party</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="eventDesc">Description:</label>
+                        <textarea id="eventDesc" rows="3" placeholder="Enter event details..."></textarea>
+                    </div>
+
+                    <button type="submit">Add Event</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="card">
+                <h2>My Events</h2>
+                
+                <div class="action-buttons">
+                    <button id="clearBtn">Clear All Events</button>
+                    <button id="sampleBtn">Add Sample Events</button>
+                </div>
+
+                <div id="eventList" class="event-container">
+                    <p class="empty-msg">No events yet. Add your first event!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-section">
+        <div class="card">
+            <h2>DOM Manipulation Demo</h2>
+            <div class="key-box">
+                <p><strong>You Pressed:</strong> <span id="keyOutput">Press any key...</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
