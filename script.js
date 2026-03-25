@@ -58,7 +58,9 @@ sampleBtn.addEventListener('click', function() {
         { title: 'Web Dev II Exam', date: '2026-03-10', cat: 'Conference', desc: 'Final examination for Advanced JS.' },
         { title: 'React Workshop', date: '2026-04-05', cat: 'Workshop', desc: 'Deep dive into Hooks and Context API.' }
     ];
-
+clearBtn.addEventListener('click', function() {
+    eventList.innerHTML = '<p class="empty-msg">No events yet. Add your first event!</p>';
+});
     samples.forEach(event => {
         createEventCard(event.title, event.date, event.cat, event.desc);
     });
