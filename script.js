@@ -65,7 +65,9 @@ clearBtn.addEventListener('click', function() {
         createEventCard(event.title, event.date, event.cat, event.desc);
     });
 });
-
+document.addEventListener('keydown', function(e) {
+    keyOutput.textContent = e.key === " " ? "Spacebar" : e.key;
+});
 document.addEventListener('keydown', function(e) {
     keyOutput.textContent = e.key === " " ? "Spacebar" : e.key;
 });
