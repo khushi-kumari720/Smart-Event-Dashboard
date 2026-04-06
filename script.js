@@ -34,6 +34,7 @@ eventForm.addEventListener('submit', function(e) {
     const desc = document.getElementById('eventDesc').value;
 
     createEventCard(title, date, category, desc);
+    createEventCard(title, date, category, desc);
 
     eventForm.reset();
 });
